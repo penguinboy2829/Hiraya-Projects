@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title%} Create Task Page {% endblock %}
+{%block content%}
+
+<div class = grid-container>
+    
+    <form action = "#" method = "post" style="background-color: #fff;">
+        <p style = "padding-bottom: 0px;">Task Name</p>
+        <p style = "padding-top: 0px;"><input class = "txt-box" type = "text" name = "nm" /></p>
+
+        <p style = "padding-bottom: 0px;">Time</p>
+        <p style = "padding-top: 0px;"><input class = "txt-box" type = "time" name = "nm" /></p>
+
+        <p style = "padding-bottom: 0px;">Day</p>
+        <p style = "padding-top: 0px;"><input class = "txt-box" type = "date" name = "nm" /></p>
+
+        <p style = "padding-bottom: 0px;">Difficulty</p>
+        <p style = "padding-top: 0px;"><input class = "txt-box" type = "text" name = "nm" /></p>
+
+        <p><input id ="sub-button" type = "submit" value = "Submit"/></p>
+    </form>
+</div>
+    <a class="button" href = "/">View Inventory</a>
+{% endblock %}
