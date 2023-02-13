@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title%} View Schedule {% endblock %}
+{%block content%}
+
+<div class = grid-container>
+    <div class = gr-item>
+        <p>Task</p>
+    </div>
+    <div class = gr-item>
+        <p>Time</p>
+    </div>
+    <div class = gr-item>
+        <p>Day</p>
+    </div>
+    <div class = gr-item>
+        <p>Difficulty</p>
+    </div>
+</div>
+    {% for item in values %}
+        <div class = grid-container>
+            <div class = gr-item>
+                <p>{{item.name}}</p>
+            </div>
+            <div class = gr-item>
+                <p>{{item.email}}</p>
+            </div>
+        </div>    
+    {% endfor %}
+    <div class = "button-container">
+        <a class="button" href = "edit">Editor</a>
+    </div>
+    
+
+{% endblock %}
