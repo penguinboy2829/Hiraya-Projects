@@ -1,24 +1,38 @@
 {% extends "base.html" %}
 {% block title%} Create Task Page {% endblock %}
 {%block content%}
+    <div class="sec-container">
+        <div class = "b-container">
+            <h2><i class="fa fa-plus-square-o" aria-hidden="true" style="color: #1c87c9"></i> ADD TASK</h2>
+        </div>
+        <div class = "b-container">
+            <a class="button" href = "/">View Schedule</a>
+        </div>
+    </div>
 
-<div class = grid-container>
+    <hr style = "padding: 0px 20px 0px 20px; margin: 0px 50px 0px 50px;">
+    <div class="edit-container">
+        <form action = "#" method = "post">
+            <p style = "padding-bottom: 0px;">Task Name</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" name = "nm" /></p>
+
+            <p style = "padding-bottom: 0px;">Time</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" type = "time" name = "tm" /></p>
+
+            <p style = "padding-bottom: 0px;">Date</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" type = "date" name = "dm" /></p>
+
+            <p style = "padding-bottom: 0px;">Priority Level</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" name = "pm" placeholder="E.g.: Low" /></p>
+            <datalist id="choice" >
+                <option value = "High">
+                <option value="Normal">
+                <option value="Low">
+                <!-- ... -->
+              </datalist>
+
+            <p><input id ="sub-button" type = "submit" value = "Submit"/></p>
+        </form>
+    </div>
     
-    <form action = "#" method = "post" style="background-color: #fff;">
-        <p style = "padding-bottom: 0px;">Task Name</p>
-        <p style = "padding-top: 0px;"><input class = "txt-box" type = "text" name = "nm" /></p>
-
-        <p style = "padding-bottom: 0px;">Time</p>
-        <p style = "padding-top: 0px;"><input class = "txt-box" type = "time" name = "nm" /></p>
-
-        <p style = "padding-bottom: 0px;">Day</p>
-        <p style = "padding-top: 0px;"><input class = "txt-box" type = "date" name = "nm" /></p>
-
-        <p style = "padding-bottom: 0px;">Difficulty</p>
-        <p style = "padding-top: 0px;"><input class = "txt-box" type = "text" name = "nm" /></p>
-
-        <p><input id ="sub-button" type = "submit" value = "Submit"/></p>
-    </form>
-</div>
-    <a class="button" href = "/">View Inventory</a>
 {% endblock %}

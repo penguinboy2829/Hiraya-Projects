@@ -2,33 +2,65 @@
 {% block title%} View Schedule {% endblock %}
 {%block content%}
 
-<div class = grid-container>
-    <div class = gr-item>
-        <p>Task</p>
+<div class="sec-container">
+    <div class = "b-container">
+        <h2><i class="fa fa-table fa-2xs" aria-hidden = "true" style="color: #1c87c9"></i> SCHEDULE</h2>
     </div>
-    <div class = gr-item>
-        <p>Time</p>
-    </div>
-    <div class = gr-item>
-        <p>Day</p>
-    </div>
-    <div class = gr-item>
-        <p>Difficulty</p>
+    <div class = "b-container">
+        <a class="button" href = "create">
+           New Task
+        </a>
     </div>
 </div>
+<div class = grid-container>
+    <div class = gr-item>
+        <h3 style = "color:#fff;">Task</h3>
+    </div>
+    <div class = gr-item>
+        <h3 style = "color:#fff">Time</h3>
+    </div>
+    <div class = gr-item>
+        <h3 style = "color:#fff">Date</h3>
+    </div>
+    <div class = gr-item>
+        <h3 style = "color:#fff">Priority</h3>
+    </div>
+    <div class = gr-item>
+        <h3 style = "color:#fff; height: 2vh">Edit</p>
+    </div>
+    <div class = gr-item>
+        <h3 style = "color:#fff; height: 2vh">Delete</h3>
+    </div>
+    
+</div>
     {% for item in values %}
-        <div class = grid-container>
+        <div class = grid-container-2>
             <div class = gr-item>
-                <p>{{item.name}}</p>
+                <p>{{item.nm}}</p>
             </div>
             <div class = gr-item>
-                <p>{{item.email}}</p>
+                <p>{{item.tm}}</p>
+            </div>
+            <div class = gr-item>
+                <p>{{item.dm}}</p>
+            </div>
+            <div class = gr-item>
+                <p>{{item.pm}}</p>
+            </div>
+            <div class = gr-item>
+                <a class="button" style="width: 3vw; padding: 0.5vw 0.01vw;" href = "{{ url_for('update', id=item.id) }}">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true" style="text-align:unset"></i>
+                </a>
+            </div>
+            <div class = gr-item>
+                <a class="button" style="background-color:rgb(240, 55, 55); width: 3vw; padding: 0.5vw 0.01vw;" href = "{{ url_for('delete', id=item.id) }}">
+                    <i class="fa fa-times" aria-hidden = "true"></i>
+                </a>
             </div>
         </div>    
+        <hr style = "padding: 0px 20px 0px 20px; margin: 0 1vw 0 1vw;">
     {% endfor %}
-    <div class = "button-container">
-        <a class="button" href = "edit">Editor</a>
-    </div>
+
     
 
 {% endblock %}

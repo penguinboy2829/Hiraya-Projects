@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title%} Update Task Page {% endblock %}
+{%block content%}
+    <div class="sec-container">
+        <div class = "b-container">
+            <h2><i class="fa fa-pencil-square-o fa-xs" aria-hidden="true" style="color: #1c87c9"></i> EDIT TASK</h2>
+        </div>
+        <div class = "b-container">
+            <a class="button" href = "/">View Schedule</a>
+        </div>
+    </div>
+
+    <hr style = "padding: 0px 20px 0px 20px; margin: 0px 0px 0px 0px;">
+    <div class="edit-container">
+        <form action = "#" method = "post">
+            <p style = "padding-bottom: 0px; margin-right: 16vw;">Task Name</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" name = "nm" value="{{sched.nm}}"/></p>
+
+            <p style = "padding-bottom: 0px; margin-right: 16vw;">Time</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" type = "time" name = "tm" value="{{sched.tm}}"/></p>
+
+            <p style = "padding-bottom: 0px; margin-right: 16vw;">Day</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" type = "date" name = "dm" value="{{sched.dm}}"/></p>
+
+            <p style = "padding-bottom: 0px; margin-right: 16vw;">Priority Level</p>
+            <p style = "padding-top: 0px;"><input class = "txt-box" name = "pm" value="{{sched.pm}}"/></p>
+            <datalist id="choice" >
+                <option value = "High">
+                <option value="Normal">
+                <option value="Low">
+                <!-- ... -->
+              </datalist>
+
+            <p><input id ="sub-button" type = "submit" value = "Submit"/></p>
+        </form>
+    </div>
+    
+{% endblock %}

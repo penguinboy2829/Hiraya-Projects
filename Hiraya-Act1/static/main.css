@@ -1,36 +1,68 @@
 * {
     font-family: 'DM Sans';
-    background-color: #c9c9c9;
-    padding: 10px;
+    padding: 5px;
+}
+
+body{
+    
+    margin-left: 10vw;
+    width: 80vw;
+    background-image: linear-gradient(60deg, #74ff67, #72c3f5);
+    padding: 5px;
+}
+
+h1{
+    font-weight: bolder;
+}
+
+h2{
+    font-weight:bold;
+    font-size: 2vw;
+}
+
+h3{
+    font-size: 1.2vw;
 }
 
 a {
-    background-color: #fff;
     font-size: 15px;
 }
 
 p {
     font-size: 15px;
-    background-color: #fff;
-    
+    color: #303030
+}
+
+#app-name{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #1c87c9;
 }
 
 .container{
     background-color: #fff;
     height: 80vh;
-    
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 10px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    justify-content: center;
+    padding: 0px;
 }
 
 #title{
     color: red;
 }
 
-.button-container{
-    background-color: #fff;
-    margin-top: 0;
-    margin-right: auto;
-    margin-bottom: 0;
-    margin-left: auto;
+.b-container{
+    box-sizing: border-box;
+    text-align: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .button{
@@ -54,11 +86,9 @@ p {
 }
 
 .txt-box{
-    background-color: #fff;
     border-style: solid;
     border-radius: 10px;
     width: 20vw;
-
 }
 
 #sub-button{
@@ -83,18 +113,40 @@ p {
 
 .grid-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    justify-self: center;
-    padding: 10px 50px 0px 100px;
-    width: 50vw;   
-    background-color: #fff;
-    margin-left: 200px;
+    background-image: linear-gradient(120deg, #35e625, #299be2);
+    padding: 0px 10px 0px 10px;
+    padding-bottom: 2px;
+    margin: 0px 0px 0px 0px;
+    grid-template-columns: 10vw 1fr 1fr 1fr 1fr 10vw;
+}
+
+.grid-container-2{
+    display: grid;
+    padding: 10px 10px 10px 10px;
+    margin: 0px;
+    grid-template-columns: 10vw 1fr 1fr 1fr 1fr 10vw;
 }
 
 .gr-item{
     padding: 0 5px 0 5px;
     box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.8);
     text-align: center;
-    background-color: #fff;
+}
+
+.edit-container{
+    display: grid;
+    padding: 10px 45px 10px 45px;
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+}
+
+.sec-container{
+    display: grid;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 0px;
+    margin-bottom: -10px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 40vw;
 }
