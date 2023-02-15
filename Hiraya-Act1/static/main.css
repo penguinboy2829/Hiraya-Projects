@@ -117,20 +117,22 @@ p {
     padding: 0px 10px 0px 10px;
     padding-bottom: 2px;
     margin: 0px 0px 0px 0px;
-    grid-template-columns: 10vw 1fr 1fr 1fr 1fr 10vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 10vw 10vw;
 }
 
 .grid-container-2{
     display: grid;
     padding: 10px 10px 10px 10px;
     margin: 0px;
-    grid-template-columns: 10vw 1fr 1fr 1fr 1fr 10vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr 10vw 10vw;
 }
 
 .gr-item{
     padding: 0 5px 0 5px;
     box-sizing: border-box;
     text-align: center;
+    display: block;
+    margin-block: auto;
 }
 
 .edit-container{
